@@ -29,7 +29,7 @@ $ brew install fzf
 $ brew install ripgrep
 ```
 
-### Instasll coc related plugins
+### Install coc related plugins
 ```bash
 # Install node
 $ brew install node
