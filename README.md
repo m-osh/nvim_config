@@ -20,6 +20,15 @@ cp -r nvim ~/.config
 :checkhealth
 ```
 
+### Setup fuzzy search
+```bash
+# Install fuzzy search
+$ brew install fzf
+
+# fzf uses this grep tool
+$ brew install ripgrep
+```
+
 ### Instasll coc related plugins
 ```vim
 # Install ansible support
@@ -46,3 +55,19 @@ $ pip<nvim python ver> install jedi
 ```bash
 $ brew install terrafrom-ls
 ```
+
+### Commonly used shortcuts
+**FZF fuzzy search keys**
+
+`crtl-t` file search
+
+`,/` string search ignore case
+
+`,*` search for the string the cursor is on
+
+**Open sidebar tree**
+
+`,nt` Open browser
+
+`crtl-w <left> or <right>` navigate panes
+
