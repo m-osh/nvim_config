@@ -30,6 +30,10 @@ $ brew install ripgrep
 ```
 
 ### Instasll coc related plugins
+```bash
+# Install node
+$ brew install node
+```
 ```vim
 # Install ansible support
 :CocInstall @yaegassy/coc-ansible
