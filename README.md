@@ -75,3 +75,34 @@ $ brew install terrafrom-ls
 
 `crtl-w <left> or <right>` navigate panes
 
+**Turn on spell check**
+
+`<F5>` or `func-<F5>`
+
+`z=` for suggestions
+
+**Editing / Markdown**
+
+**(normal mode)**
+
+`<ctrl>-<alt>-"` Surround a word with `"`
+
+`<ctrl>-<alt>-'` Surround a word with `'`
+
+`<ctrl>-<alt>-b` Surround a word with `**`
+
+`<ctrl>-<alt>-t` Surround a word with `*`
+
+**(insert mode)**
+
+`[,` start editing in a `[` block
+
+`{,` start editing in a `{` block
+
+`<alt>-"` start editing in `""`
+
+`<alt>-'` start editing in `''`
+
+`<alt>-(` start editing in `()`
+
+`<alt>-[` start editing in `[]`

@@ -39,6 +39,20 @@ set listchars=tab:▸\ ,trail:␣,precedes:←,extends:→,nbsp:•
 " colors myevening
 colors kolor
 
+" Map spellcheck to F5 in normal and insert mode
+set spelllang=en_au
+nnoremap <silent> <F5> :set spell!<cr>
+inoremap <silent> <F5> <C-O>:set spell!<cr>
+
+" nnoremap <leader>% :set spell!<cr>
+" inoremap <leader>% <C-O>:set spell!<cr>
+
+" ]s – Jump to the next misspelled word
+" [s – Jump to the previous misspelled word
+" z= – Bring up the suggested replacements
+" zg – Good word: Add the word under the cursor to the dictionary
+" zw – Woops! Undo and remove the word from the dictionary
+
 " Copy to clipboard in mac
 vnoremap <C-c> :w !pbcopy<CR><CR>
 
@@ -126,14 +140,24 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:terraform_fmt_on_save=1
 let g:terraform_align=1
 
-" Auto closing
+" Open a [,} block
 inoremap {, {<CR>},<C-c>O
 inoremap [, [<CR>],<C-c>O
 
+" Insert a word into "", '', () or []
 inoremap <M-"> ""<C-c>i
 inoremap <M-'> ''<C-c>i
 inoremap <M-(> ()<C-c>i
 inoremap <M-[> []<C-c>i
+
+" Surround a word with "
+nnoremap <C-M-"> ciw""<Esc>P
+" Surround a word with '
+nnoremap <C-M-'> ciw''<Esc>P
+" MD, surround a word with **
+nnoremap <C-M-b> ciw**<C-r>"**
+" MD, surround a word with *
+nnoremap <C-M-t> ciw*<C-r>"*
 
 "" CoC
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
