@@ -10,7 +10,7 @@ cp -r nvim ~/.config
 ```vim
 :PlugInstall
 ```
-### Update "plugins" from git
+### Update plugins from git
 ```vim
 :PlugUpdate
 ```
