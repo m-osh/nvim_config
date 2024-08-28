@@ -10,7 +10,7 @@ cp -r nvim ~/.config
 ```vim
 :PlugInstall
 ```
-### Update plugins from git
+### Update "plugins" from git
 ```vim
 :PlugUpdate
 ```
@@ -84,14 +84,17 @@ $ brew install terrafrom-ls
 **Editing / Markdown**
 
 **(normal mode)**
+*This is using the vim-sandwich plugin*
 
-`<ctrl>-<alt>-"` Surround a word with `"`
+`<sa><e>-<">` Surround a word with `"`
 
-`<ctrl>-<alt>-'` Surround a word with `'`
+`<sa><e>-<'>` Surround a word with `'`
 
-`<ctrl>-<alt>-b` Surround a word with `**`
+``<sa><e>-<`>`` Surround a word with ``<`>``
 
-`<ctrl>-<alt>-t` Surround a word with `*`
+`<sa><e>-<*>` Surround a word with `*`
+
+`<sa><e>-<*><.>` Surround a word with `**`, The `<.>` repeates the operation again
 
 **(insert mode)**
 

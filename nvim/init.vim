@@ -27,6 +27,8 @@ call plug#begin(g:plugged_home)
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  " Editing
+  Plug 'machakann/vim-sandwich'
 call plug#end()
 
 " Show trailing spaces
@@ -140,6 +142,9 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:terraform_fmt_on_save=1
 let g:terraform_align=1
 
+" Sandwich - Helps surrounding text with characters
+let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
+
 " Open a [,} block
 inoremap {, {<CR>},<C-c>O
 inoremap [, [<CR>],<C-c>O
@@ -149,15 +154,6 @@ inoremap <M-"> ""<C-c>i
 inoremap <M-'> ''<C-c>i
 inoremap <M-(> ()<C-c>i
 inoremap <M-[> []<C-c>i
-
-" Surround a word with "
-nnoremap <C-M-"> ciw""<Esc>P
-" Surround a word with '
-nnoremap <C-M-'> ciw''<Esc>P
-" MD, surround a word with **
-nnoremap <C-M-b> ciw**<C-r>"**
-" MD, surround a word with *
-nnoremap <C-M-t> ciw*<C-r>"*
 
 "" CoC
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
