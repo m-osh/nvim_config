@@ -55,9 +55,11 @@ $ pip<nvim python ver> install jedi
 :CocCommand python.setInterpreter
 ```
 
-### Install terraform language server for systax supprt
+### Install language servers for systax supprt
 ```bash
 $ brew install terrafrom-ls
+$ brew install shellcheck
+$ brew install bash-language-server
 ```
 
 ### Commonly used shortcuts

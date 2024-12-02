@@ -130,6 +130,10 @@ noremap <F3> :Autoformat<CR>
 " Don't select first option in complete popup
 autocmd FileType * set completeopt=longest,menuone,preview
 
+" For terraform templates highlights
+au BufRead,BufNewFile *.sh.tpl set filetype=bash
+au BufRead,BufNewFile *.ps1.tpl set filetype=ps1
+
 " add yaml stuffs
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent nofoldenable
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
