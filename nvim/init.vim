@@ -22,7 +22,7 @@ call plug#begin(g:plugged_home)
   Plug 'vim-syntastic/syntastic'
   Plug 'juliosueiras/vim-terraform-completion'
   Plug 'neomake/neomake'
-  Plug 'kassio/neoterm'
+  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-fugitive'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -63,6 +63,9 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 
 " Word end characters
 set iskeyword-=_
+
+" Terminal Toggling
+lua require("plugins.toggleterm")
 
 " Show hidden files in NerdTree
 let NERDTreeShowHidden=1
@@ -127,16 +130,9 @@ set hlsearch            " highlight matches
 set ignorecase          " ignore case when searching
 noremap <F3> :Autoformat<CR>
 
-" Don't select first option in complete popup
-autocmd FileType * set completeopt=longest,menuone,preview
-
 " For terraform templates highlights
 au BufRead,BufNewFile *.sh.tpl set filetype=bash
 au BufRead,BufNewFile *.ps1.tpl set filetype=ps1
-
-" add yaml stuffs
-au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent nofoldenable
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Airline
  let g:airline_left_sep  = ''

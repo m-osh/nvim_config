@@ -71,6 +71,10 @@ $ brew install bash-language-server
 
 `,*` search for the string the cursor is on
 
+**Terminal toggle**
+`crtl-\` Open/toggle terminal (terminal stays in the background)
+Use `i` to type into the terminal, and `esc` to go back to editor mode
+
 **Open sidebar tree**
 
 `,nt` Open browser
